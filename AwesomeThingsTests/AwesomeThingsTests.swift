@@ -26,7 +26,7 @@ class AwesomeThingsTests: XCTestCase {
         XCTAssertNotNil(text)
     }
     
-    func textFailingTest() {
+    func testFailingTest() {
         let text = "Hello World"
         XCTAssertNil(text)
     }
