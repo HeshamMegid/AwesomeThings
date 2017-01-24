@@ -7,19 +7,15 @@
 //
 
 import UIKit
+import HMSegmentedControl
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let control = HMSegmentedControl(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+        view.addSubview(control)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
