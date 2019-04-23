@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import HMSegmentedControl
+//import HMSegmentedControl
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let control = HMSegmentedControl(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
-        view.addSubview(control)
+//        let control = HMSegmentedControl(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+//        view.addSubview(control)
     }
 }
 
