@@ -7,7 +7,10 @@
 //
 
 import UIKit
-import Sentry
+
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,14 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // Create a Sentry client and start crash handler
-        do {
-            Client.shared = try Client(dsn: "https://cd5fe61b976d423bb5320bac4605cf6d@sentry.io/1453348")
-            try Client.shared?.startCrashHandler()
-        } catch let error {
-            print("\(error)")
-        }
+        MSAppCenter.start("c248a25a-b6c6-43c3-9418-5ba7b67f061d", withServices:[ MSAnalytics.self, MSCrashes.self ])
         
+//        MSCrashes.
         return true
     }
 

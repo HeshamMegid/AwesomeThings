@@ -1,24 +1,23 @@
 PODS:
-  - Sentry (4.3.1):
-    - Sentry/Core (= 4.3.1)
-  - Sentry/Core (4.3.1)
+  - AppCenter (1.14.0):
+    - AppCenter/Analytics (= 1.14.0)
+    - AppCenter/Crashes (= 1.14.0)
+  - AppCenter/Analytics (1.14.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.14.0)
+  - AppCenter/Crashes (1.14.0):
+    - AppCenter/Core
 
 DEPENDENCIES:
-  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `4.3.1`)
+  - AppCenter
 
-EXTERNAL SOURCES:
-  Sentry:
-    :git: https://github.com/getsentry/sentry-cocoa.git
-    :tag: 4.3.1
-
-CHECKOUT OPTIONS:
-  Sentry:
-    :git: https://github.com/getsentry/sentry-cocoa.git
-    :tag: 4.3.1
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AppCenter
 
 SPEC CHECKSUMS:
-  Sentry: 5267d493a398663538317e4dcc438c12c66202ed
+  AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
 
-PODFILE CHECKSUM: aa4732dfc12780fc838471ef987a914cdab7df53
+PODFILE CHECKSUM: 70bc587cf65ef77de17ea7cf80c06127c43d5a4c
 
 COCOAPODS: 1.6.1
