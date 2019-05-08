@@ -3,7 +3,7 @@ platform :ios, '9.0'
 target 'AwesomeThings' do
   use_frameworks!
 
-  pod 'AppCenter'
+  pod 'NewRelicAgent'
 
   target 'AwesomeThingsTests' do
     inherit! :search_paths

@@ -15,6 +15,7 @@
 		540EC0501E35F3890018A444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540EC04E1E35F3890018A444 /* LaunchScreen.storyboard */; };
 		540EC05B1E35F38A0018A444 /* AwesomeThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EC05A1E35F38A0018A444 /* AwesomeThingsTests.swift */; };
 		540EC0661E35F38A0018A444 /* AwesomeThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EC0651E35F38A0018A444 /* AwesomeThingsUITests.swift */; };
+		544324E62282F3A1001BED6E /* Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 544324E52282F3A1001BED6E /* Placeholder.m */; };
 		744B4CFFA66C0887AD492362 /* Pods_AwesomeThingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC092BF8D6D34D59446DF14E /* Pods_AwesomeThingsTests.framework */; };
 		D9F9563668F2A06416C7DE9C /* Pods_AwesomeThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B548580B7F2D3E9533C760D /* Pods_AwesomeThings.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,9 @@
 		540EC0611E35F38A0018A444 /* AwesomeThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeThingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		540EC0651E35F38A0018A444 /* AwesomeThingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeThingsUITests.swift; sourceTree = "<group>"; };
 		540EC0671E35F38A0018A444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		544324E32282F3A0001BED6E /* AwesomeThings-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeThings-Bridging-Header.h"; sourceTree = "<group>"; };
+		544324E42282F3A1001BED6E /* Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Placeholder.h; sourceTree = "<group>"; };
+		544324E52282F3A1001BED6E /* Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Placeholder.m; sourceTree = "<group>"; };
 		5B548580B7F2D3E9533C760D /* Pods_AwesomeThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7E2F913A62511DB228D0CA /* Pods-AwesomeThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeThings/Pods-AwesomeThings.release.xcconfig"; sourceTree = "<group>"; };
 		BC092BF8D6D34D59446DF14E /* Pods_AwesomeThingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeThingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,9 @@
 				540EC04C1E35F3890018A444 /* Assets.xcassets */,
 				540EC04E1E35F3890018A444 /* LaunchScreen.storyboard */,
 				540EC0511E35F3890018A444 /* Info.plist */,
+				544324E42282F3A1001BED6E /* Placeholder.h */,
+				544324E52282F3A1001BED6E /* Placeholder.m */,
+				544324E32282F3A0001BED6E /* AwesomeThings-Bridging-Header.h */,
 			);
 			path = AwesomeThings;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				540EC03E1E35F3890018A444 /* Sources */,
 				540EC03F1E35F3890018A444 /* Frameworks */,
 				540EC0401E35F3890018A444 /* Resources */,
+				544324E72282F3D6001BED6E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -237,6 +245,7 @@
 					540EC0411E35F3890018A444 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = KUK8W9TW2G;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					540EC0551E35F38A0018A444 = {
@@ -319,6 +328,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		544324E72282F3D6001BED6E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" \"AA622f050cfbc1dc3a3199da288eab5acd81f09aa6\"\n";
+		};
 		58C29C234750D739FCF7420B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +390,7 @@
 			files = (
 				540EC0481E35F3890018A444 /* ViewController.swift in Sources */,
 				540EC0461E35F3890018A444 /* AppDelegate.swift in Sources */,
+				544324E62282F3A1001BED6E /* Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,12 +541,15 @@
 			baseConfigurationReference = 39E0B68437B40C3EBE96BF80 /* Pods-AwesomeThings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KUK8W9TW2G;
 				INFOPLIST_FILE = AwesomeThings/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tinybits.awesomethings.AwesomeThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeThings/AwesomeThings-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -529,12 +559,14 @@
 			baseConfigurationReference = 7E7E2F913A62511DB228D0CA /* Pods-AwesomeThings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = KUK8W9TW2G;
 				INFOPLIST_FILE = AwesomeThings/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.tinybits.awesomethings.AwesomeThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeThings/AwesomeThings-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

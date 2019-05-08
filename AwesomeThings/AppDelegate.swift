@@ -8,10 +8,6 @@
 
 import UIKit
 
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        MSAppCenter.start("c248a25a-b6c6-43c3-9418-5ba7b67f061d", withServices:[ MSAnalytics.self, MSCrashes.self ])
+        NewRelic.start(withApplicationToken:"AA622f050cfbc1dc3a3199da288eab5acd81f09aa6")
         
-//        MSCrashes.
         return true
     }
 
